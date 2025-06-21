@@ -1,0 +1,152 @@
+/* Hacettepe Üniversitesi Renkleri */
+:root {
+    --hu-red: #9e0b0f;
+    --hu-dark-red: #7a090c;
+    --hu-blue: #005b82;
+    --hu-dark-blue: #003d56;
+    --hu-green: #006341;
+    --hu-dark-green: #004d33;
+    --hu-gray: #6c757d;
+    --hu-light: #f8f9fa;
+}
+
+/* Genel Stiller */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hu-header {
+    background-color: white;
+    border-bottom: 4px solid var(--hu-red);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hu-logo {
+    height: 60px;
+}
+
+.hu-title {
+    color: var(--hu-red);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.hu-subtitle {
+    color: var(--hu-blue);
+    font-size: 0.9rem;
+}
+
+.hu-date {
+    background-color: var(--hu-blue);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.hu-footer {
+    background-color: var(--hu-dark-blue);
+    color: white;
+    border-top: 3px solid var(--hu-red);
+}
+
+/* Buton Stilleri */
+.btn-hu-primary {
+    background-color: var(--hu-red);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.btn-hu-primary:hover {
+    background-color: var(--hu-dark-red);
+    color: white;
+}
+
+.btn-hu-secondary {
+    background-color: var(--hu-blue);
+    color: white;
+    border: none;
+}
+
+.btn-hu-secondary:hover {
+    background-color: var(--hu-dark-blue);
+    color: white;
+}
+
+.btn-outline-hu-secondary {
+    border: 1px solid var(--hu-blue);
+    color: var(--hu-blue);
+}
+
+.btn-outline-hu-secondary:hover {
+    background-color: var(--hu-blue);
+    color: white;
+}
+
+/* Kart Stilleri */
+.card {
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-header {
+    font-weight: 600;
+}
+
+.bg-hu-primary {
+    background-color: var(--hu-red) !important;
+}
+
+/* İstatistik Kartları */
+.hu-stat-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.stat-info h5 {
+    font-size: 0.9rem;
+    color: var(--hu-gray);
+    margin-bottom: 0.25rem;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: var(--hu-dark-blue);
+}
+
+/* Form Stilleri */
+.form-control:focus {
+    border-color: var(--hu-blue);
+    box-shadow: 0 0 0 0.25rem rgba(0, 91, 130, 0.25);
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+    .hu-title {
+        font-size: 1.2rem;
+    }
+    .hu-logo {
+        height: 40px;
+    }
+}
