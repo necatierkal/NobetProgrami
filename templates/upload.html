@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="card shadow">
+    <div class="card-header bg-hu-primary text-white">
+        <h2 class="mb-0"><i class="fas fa-file-upload me-2"></i>Excel Dosyası Yükle</h2>
+    </div>
+    <div class="card-body">
+        <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            <div class="mb-4">
+                <label for="file" class="form-label fw-bold">Personel Planlama Dosyası Seçin:</label>
+                <div class="input-group">
+                    <input type="file" class="form-control form-control-lg" id="file" name="file" accept=".xlsx" required>
+                    <button class="btn btn-hu-secondary" type="button" data-bs-toggle="modal" data-bs-target="#helpModal">
+                        <i class="fas fa-question-circle"></i> Yardım
+                    </button>
+                </div>
+                <div class="form-text mt-2">
+                    Lütfen formata uygun Excel dosyasını yükleyiniz. Örnek Excel Yardım butonunda mevcuttur.
+                </div>
+                <div class="invalid-feedback">
+                    Lütfen geçerli bir Excel dosyası seçiniz.
+                </div>
+            </div>
+            
+            <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-hu-primary btn-lg">
+                    <i class="fas fa-calculator me-2"></i> Planlamayı Oluştur
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Yardım Modalı -->
+<div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="helpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-hu-primary text-white">
+                <h5 class="modal-title" id="helpModalLabel"><i class="fas fa-info-circle me-2"></i>Dosya Formatı Yardım</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-info">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    Lütfen aşağıdaki sayfalara sahip bir Excel dosyası yükleyiniz:
+                </div>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Personel Ana Liste
+                        <span class="badge bg-hu-primary rounded-pill">Zorunlu</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Tüm Alanlar
+                        <span class="badge bg-hu-primary rounded-pill">Zorunlu</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Personel Çalışma Saatleri
+                        <span class="badge bg-hu-primary rounded-pill">Zorunlu</span>
+                    </li>
+                </ul>
+                <div class="text-center">
+                    <a href="{{ url_for('static', filename='samples/inputs_to_load.xlsx') }}" class="btn btn-hu-secondary">
+                        <i class="fas fa-file-excel me-2"></i>Örnek Dosyayı İndir
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
